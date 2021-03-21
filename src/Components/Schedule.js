@@ -9,7 +9,8 @@ const Schedule = () => {
             const data1 = await response1.json();
             setInfo(data1);
         }
-        Fetch()
+        Fetch();
+        setInterval(Fetch, 180000)
     }, [])
     if (info?.current_playlist.name === 'Дэн Климов') {
         return (
