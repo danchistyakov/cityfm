@@ -39,7 +39,7 @@ const Lastsongs = () => {
             setResults(results);
         }
         Fetch();
-        setInterval(Fetch, 55000);
+        setInterval(Fetch, 70000);
     }, [])
     return (
         <section className={style.lastsongs}>

@@ -19,7 +19,7 @@ const Player = () => {
         setCover(photo);
     }
     Fetch();
-    setInterval(Fetch, 55000)
+    setInterval(Fetch, 70000)
     return (
         <section className={style.player}>
             <div className={style.song_cover} style={{ backgroundImage: `url(${cover})` }}>
