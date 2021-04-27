@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import style from '../CSS/track.module.css';
-import { BrowserRouter as Route, Link } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const Track = (props) => {
@@ -25,7 +24,7 @@ const Track = (props) => {
                 <div className={style.track_cover} style={{ backgroundImage: `url(${cover})` }}></div>
                 <div className={style.track_info}>
                     <h1 className={style.track_title}>{props.match.params.name.replace(/%20/g, ' ').replace(/%26/g, '&')}</h1>
-                    <Link to={`/artist/${props?.match.params.artist}`}><h2 className={style.track_artist}>{props?.match.params.artist.replace(/%20/g, ' ').replace(/%26/g, '&')}</h2></Link>
+                    <h2 className={style.track_artist}>{props?.match.params.artist.replace(/%20/g, ' ').replace(/%26/g, '&')}</h2>
                     <div className={style.track_listen}>
                         <h3 className={style.listen_title}>Слушать:</h3>
                         <div className={style.listen_service}><a href={`https://vk.com/audios0?q=${props.match.params.artist}%20${props.match.params.name}&section=my`} target="_blank" rel="noreferrer">VK</a></div>
