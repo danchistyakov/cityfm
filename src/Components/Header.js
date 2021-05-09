@@ -15,9 +15,11 @@ const Header = () => {
     const navbar = () => {
         if (toggle === 'active') {
             setToggle('')
-        } else { 
+        } else {
             setToggle('active')
         }
+        const overflow = display === false ? 'auto' : 'hidden'
+        document.body.style.overflowY = overflow;
     }
     return (
         <header className={`header ${toggle}`}>
