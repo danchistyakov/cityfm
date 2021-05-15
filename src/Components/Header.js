@@ -18,7 +18,7 @@ const Header = () => {
         } else {
             setToggle('active')
         }
-        const overflow = toggle === '' ? 'auto' : 'hidden'
+        const overflow = toggle === 'active' ? 'auto' : 'hidden';
         document.body.style.overflowY = overflow;
     }
     return (
